@@ -11,11 +11,10 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <div class="logo" onclick="scrollToTop()">🏠</div>
+      <div class="logo" onclick="scrollToTop()">ToTheTop</div>
       <div class="nav-center">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#home">Home</a></li> -->
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -23,7 +22,7 @@
         </ul>
       </div>
       <div class="nav-right">
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="theme-toggle" onclick="toggleTheme()">⛅</button>
         <a href="https://drive.google.com/file/d/1GcF3LHkGrDvPDF5ZVJewJ5nKo3qx3cl4/view?usp=sharing" class="resume-btn" target="_blank">Resume</a>
         <a href="#certifications" class="contact-btn">Certifications</a>
         <a href="#contact" class="contact-btn">Contact</a>
@@ -32,15 +31,18 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section.1 id="home" class="hero">
     <div class="hero-content">
-      <p class="hero-greeting">hi, I'm</p>
-      <h1>Raghav Sharma</h1>
+      <p class="hero-greeting" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">hi, I'm</p>
+      <h1 >Raghav Sharma</h1>
       <p class="subtitle">I Program Solutions</p>
-      <p class="description">Crafting clean, functional tools that make digital life easier</p>
-      <a href="#projects" class="cta-button">View My Work</a>
+      <p class="description">Crafting clean, functional tools that make digital life easier,
+         and trying to make everything, like this Portfolio is too, with love.🐈 <br><br><br> *✧  ᓚᘏᗢ  ✧*
+      </p>
     </div>
-  </section>
+  </section.1>
+  
+
 
   <!-- Experience -->
   <section id="experience" class="experience">
@@ -97,6 +99,38 @@
   </div>
 </section>
 
+<!-- skills -->
+ <section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Cpp</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Tools and Concepts</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Cloud</span>
+          <span class="skill-tag">DS</span>
+          <span class="skill-tag">Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Certifications -->
   <section id="certifications" class="certifications">
@@ -137,7 +171,7 @@
         <div class="currently-card">
           <div class="currently-icon">📚</div>
           <p class="currently-title">Reading</p>
-          <p class="currently-item">The Brothers Karamazov by Dostoevsky</p>
+          <p class="currently-item"><a href="https://en.wikipedia.org/wiki/The_Brothers_Karamazov" class="currently-link" target="_blank">The Brothers Karamazov by Dostoevsky</a></p>
         </div>
         <div class="currently-card">
           <div class="currently-icon">🎧</div>
@@ -146,21 +180,59 @@
         </div>
         <div class="currently-card">
           <div class="currently-icon">🧠</div>
-          <p class="currently-title">Current Side Quest</p>
+          <p class="currently-title">Ongoing Side Quest</p>
           <p class="currently-item">Exploring Philosophy: Wittgenstein, Arendt, Nietzsche, Kierkegaard </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Add your existing sections like Projects, Skills, Contact, Footer here -->
+  <!-- contact -->
+   <section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <p class="contact-title">Email</p>
+        <a href="mailto:raghav.s7040@gmail.com" class="contact-link">raghav.s7040@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📱</div>
+        <p class="contact-title">LinkedIn</p>
+        <a href="https://www.linkedin.com/in/raghav-5harma/" class="contact-link">raghav-5harma</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- for the dark mode -->
   <script>
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      html.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
     }
-    function toggleTheme() {
-      document.documentElement.toggleAttribute('data-theme', 'dark');
+  }
+
+  // Set initial theme on load
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
     }
-  </script>
+  });
+</script>
+
 </body>
 </html>
