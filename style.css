@@ -39,6 +39,12 @@ nav {
   border-bottom: 1px solid var(--border);
   z-index: 1000;
   padding: 1rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
 }
 
 [data-theme="dark"] nav {
@@ -52,15 +58,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-}
-
-.nav-center {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.nav-center::-webkit-scrollbar {
-  display: none;
 }
 
 .nav-links, .nav-right {
@@ -81,6 +78,7 @@ nav {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover, .contact-btn:hover {
