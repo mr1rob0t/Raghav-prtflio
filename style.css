@@ -82,7 +82,7 @@ nav::-webkit-scrollbar {
   white-space: nowrap;
 }
 .nav-links a {
-  color: #070770; /* Example: custom blue */
+  color: #070770; 
 }
 
 .nav-links a:hover, .contact-btn:hover {
@@ -305,4 +305,22 @@ section {
 
 .contact-btn {
   color: var(--text-primary);
+}
+
+[data-theme="dark"] .contact-btn {
+  color: #070770 ;
+}
+.logo {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--text-primary);
+}
+.logo:hover {
+  background: rgb(207, 207, 255);
+  color: var(--primary);
 }
