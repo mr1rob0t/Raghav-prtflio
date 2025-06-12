@@ -45,6 +45,25 @@ nav {
   background:linear-gradient(180deg, #babad8,#6d7886) ;
 }
 
+@media (max-width: 768px) {
+  nav {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
