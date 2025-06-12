@@ -29,8 +29,8 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   transition: 0.35s ease;
+  padding-bottom: 100px;
 }
-
 
 nav {
   position: fixed;
@@ -42,27 +42,8 @@ nav {
 }
 
 [data-theme="dark"] nav {
-  background:linear-gradient(180deg, #babad8,#6d7886) ;
+  background: linear-gradient(180deg, #babad8, #6d7886);
 }
-
-@media (max-width: 768px) {
-  nav {
-    position: sticky;
-    top: 0;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-}
-
 
 .nav-container {
   max-width: 1200px;
@@ -73,9 +54,25 @@ nav {
   padding: 0 2rem;
 }
 
+.nav-center {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-center::-webkit-scrollbar {
+  display: none;
+}
+
 .nav-links, .nav-right {
   display: flex;
   gap: 1rem;
+}
+
+.nav-links {
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a, .contact-btn, .resume-btn {
@@ -87,21 +84,22 @@ nav {
 }
 
 .nav-links a:hover, .contact-btn:hover {
-  background:  rgb(207, 207, 255);
+  background: rgb(207, 207, 255);
   color: var(--primary);
 }
-[data-theme="dark"] .theme-toggle{
-   background: #ddddf0;
-   border-radius: 1rem;
+
+[data-theme="dark"] .theme-toggle {
+  background: #ddddf0;
+  border-radius: 1rem;
 }
 
 .resume-btn {
   background: rgb(215, 215, 241);
   color: rgb(23, 52, 114);
 }
+
 [data-theme="dark"] .resume-btn {
-    
-  background:linear-gradient(180deg, #7373cf,#becbdc) ;
+  background: linear-gradient(180deg, #7373cf, #becbdc);
 }
 
 .resume-btn:hover {
@@ -114,10 +112,11 @@ nav {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background: linear-gradient(180deg,  #f7e5f2, var(--bg-primary));
+  background: linear-gradient(180deg, #f7e5f2, var(--bg-primary));
 }
+
 [data-theme="dark"] .hero {
-  background:linear-gradient(180deg, #6d7886, #030c21) ;
+  background: linear-gradient(180deg, #6d7886, #030c21);
 }
 
 .section-title {
@@ -126,10 +125,12 @@ nav {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 section {
-  padding-top: 3rem; /* ~96px */
-  scroll-margin-top: 3rem; /* prevents heading overlap when jumped via nav */
+  padding-top: 3rem;
+  scroll-margin-top: 3rem;
 }
+
 .skills-grid {
   display: grid;
   gap: 2rem;
@@ -144,9 +145,10 @@ section {
   box-shadow: var(--shadow);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-.skill-category:hover{
-   transform: translateY(-5px);
-  box-shadow: 0 10px 15px  #a9b7f3; 
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px #a9b7f3;
 }
 
 .skill-category h3 {
@@ -168,16 +170,15 @@ section {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
 .skill-tag:hover {
   transform: translateY(-5px);
   box-shadow: 0 1px 4px #161359;
 }
-[data-theme="dark"] .skill-tag{
-   background:rgb(97, 97, 178);
-   
+
+[data-theme="dark"] .skill-tag {
+  background: rgb(97, 97, 178);
 }
-
-
 
 .container {
   max-width: 1100px;
@@ -185,7 +186,7 @@ section {
   padding: 0 1rem;
 }
 
-.experience-card, .education-card, .cert-category, .currently-card , .contact-card{
+.experience-card, .education-card, .cert-category, .currently-card, .contact-card {
   background: var(--bg-primary);
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -195,7 +196,7 @@ section {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.contact-card:hover , .experience-card:hover, .education-card:hover , .project-card:hover, .currently-card:hover, .cert-category:hover{
+.contact-card:hover, .experience-card:hover, .education-card:hover, .project-card:hover, .currently-card:hover, .cert-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px #a9b7f3;
 }
@@ -234,11 +235,6 @@ section {
   box-shadow: var(--shadow);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
-/* .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px  #a9b7f3;
-} */
 
 .project-title {
   font-size: 1.25rem;
@@ -284,7 +280,6 @@ section {
   box-shadow: var(--shadow);
   text-align: center;
 }
-
 
 .contact-icon {
   font-size: 2rem;
