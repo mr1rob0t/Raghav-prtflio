@@ -1,14 +1,14 @@
 /* styles.css */
 
 :root {
-  --primary: #908af8;
+  --primary: #8581de;
   --secondary: #bcc7d3;
   --accent: #e8cfa3;
   --bg-primary: #e8e7ff;
   --bg-secondary: #d2e0ef;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
-  --text-muted: #31578d;
+  --text-muted: #c9cdd4;
   --border: #e2e8f0;
   --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -72,6 +72,7 @@ nav::-webkit-scrollbar {
   margin: 0;
 }
 
+
 .nav-links a, .contact-btn, .resume-btn {
   text-decoration: none;
   font-weight: 500;
@@ -79,6 +80,9 @@ nav::-webkit-scrollbar {
   border-radius: 0.5rem;
   transition: 0.3s;
   white-space: nowrap;
+}
+.nav-links a {
+  color: #070770; /* Example: custom blue */
 }
 
 .nav-links a:hover, .contact-btn:hover {
@@ -93,7 +97,7 @@ nav::-webkit-scrollbar {
 
 .resume-btn {
   background: rgb(215, 215, 241);
-  color: rgb(23, 52, 114);
+  color: rgb(38, 63, 116);
 }
 
 [data-theme="dark"] .resume-btn {
@@ -297,4 +301,8 @@ section {
 
 .contact-link:hover {
   color: var(--secondary);
+}
+
+.contact-btn {
+  color: var(--text-primary);
 }
